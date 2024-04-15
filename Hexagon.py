@@ -1,4 +1,4 @@
-import Shape
+from Shape import Shape
 from math import sqrt
 
 class Hexagon(Shape):
@@ -9,7 +9,6 @@ class Hexagon(Shape):
         """
         Constarts a Hexagon.
         """
-        Shape.__init__( self )
         self.side = t
 
     def get_area(self):
@@ -22,4 +21,4 @@ class Hexagon(Shape):
         """
         String representation of the Hexagon.
         """
-        return ("The side of the hexagon is ",self.side)
+        return "The side of the hexagon is "+str(self.side)
