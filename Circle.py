@@ -1,4 +1,4 @@
-import Shape
+from Shape import Shape
 from math import pi
 
 class Circle(Shape):
@@ -9,7 +9,6 @@ class Circle(Shape):
         """
         Constarts a Circle.
         """
-        Shape.__init__( self )
         self.radius = r
 
     def get_area(self):
@@ -22,4 +21,4 @@ class Circle(Shape):
         """
         String representation of the Circle.
         """
-        return ("The radius of the circle is ",self.radius)
+        return "The radius of the circle is "+str(self.radius)
