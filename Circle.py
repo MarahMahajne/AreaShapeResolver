@@ -7,9 +7,12 @@ class Circle(Shape):
     """
     def __init__( self, r ):
         """
-        Constarts a Circle.
+        Constarts a Circle and checks the input.
         """
-        self.radius = r
+        if (super().validate_input(r)):
+            self.radius = r
+        else: 
+            self.radius = 0
 
     def get_area(self):
         """
