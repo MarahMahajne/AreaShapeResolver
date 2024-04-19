@@ -1,17 +1,15 @@
-from Shape import Shape
+from Rectangle import Rectangle
 
-class Square(Shape):
+class Square(Rectangle):
     """
-    Class representing a square.
+    Class representing a square inheriting from Rectangle.
     """
     def __init__(self, side_length):
         """
-        Constructor for Square class and checks the input.
+        Constructor for Square class.
         """
-        if super().validate_input(side_length):
-            self.side_length = side_length
-        else: 
-            self.side_length = 0
+        super().__init__(side_length, side_length)
+
 
     def get_area(self):
         """
@@ -20,7 +18,7 @@ class Square(Shape):
         Returns:
         float: The area of the square.
         """
-        return self.side_length ** 2
+        return super().get_area()
 
     def __str__(self):
         """
@@ -29,4 +27,4 @@ class Square(Shape):
         Returns:
         str: String representation of the square.
         """
-        return f"This is a Square with side length {self.side_length}"
+        return f"This is a Square with side length {self.width}"
