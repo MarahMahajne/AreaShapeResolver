@@ -2,6 +2,18 @@ class Shape:
     """
     Base class for geometrical shapes.
     """
+    
+    def validate_input(self, inp):
+        """
+        validates the input of the objects.
+        """
+        try:
+            float(self.inp)
+            return True
+        except:
+            print("invalid input for the ",self.__class__,"object")
+            return False
+            
     def get_area(self):
         """
         Abstract method to calculate the area of a shape.
