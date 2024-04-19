@@ -3,13 +3,16 @@ class Shape:
     Base class for geometrical shapes.
     """
     
-    def validate_input(self, inp):
+     def validate_input(self, inp):
         """
         validates the input of the objects.
         """
         try:
-            float(self.inp)
-            return True
+            float(inp)
+            if inp > 0: 
+                return True
+            print("invalid input for the ",self.__class__,"object")
+            return False
         except:
             print("invalid input for the ",self.__class__,"object")
             return False
