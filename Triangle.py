@@ -12,3 +12,9 @@ class Triangle(Rectangle):
         Method to calculate the area of the triangle.
         """
         return super().get_area() / 2
+
+    def __str__(self):
+        """
+        String representation of the Triangle.
+        """
+        return f"{super().__str__()}, Height: {self.height}, Width: {self.width}, Area: {self.get_area()}"
