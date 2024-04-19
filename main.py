@@ -5,9 +5,9 @@ from Circle import Circle
 from Hexagon import Hexagon
 
 def main():
-    s = Square(5)
+    s = Square(-5)
     r = Rectangle(2,10)
-    t = Triangle(6,3)
+    t = Triangle(6,"x")
     c = Circle(5)
     h = Hexagon(3)
 
