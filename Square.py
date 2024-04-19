@@ -6,9 +6,12 @@ class Square(Shape):
     """
     def __init__(self, side_length):
         """
-        Constructor for Square class.
+        Constructor for Square class and checks the input.
         """
-        self.side_length = side_length
+        if super().validate_input(side_length):
+            self.side_length = side_length
+        else: 
+            self.side_length = 0
 
     def get_area(self):
         """
