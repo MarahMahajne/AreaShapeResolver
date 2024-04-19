@@ -7,9 +7,12 @@ class Hexagon(Shape):
     """
     def __init__( self, t ):
         """
-        Constarts a Hexagon.
+        Constarts a Hexagon and checks the input.
         """
-        self.side = t
+        if super().validate_input(t):
+            self.side = t
+        else: 
+            self.side = 0
 
     def get_area(self):
         """
